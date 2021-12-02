@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { DataViewModule } from 'primeng/dataview';
+import { ButtonModule } from 'primeng/button';
+import { TabViewModule } from 'primeng/tabview';
 
 const PrimeNGComponents = [
-  DataViewModule
+  DataViewModule,
+  ButtonModule,
+  TabViewModule
+
 ];
 
 @NgModule({

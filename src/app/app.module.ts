@@ -10,19 +10,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrimengModule } from './modules/primeng/primeng.module';
 import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
-
+import { FormsModule } from '@angular/forms';
+import { CardViewComponent } from './components/body/card-view/card-view.component';
+import { ListViewComponent } from './components/body/list-view/list-view.component';
+import { ReleaseCalendarComponent } from './components/body/release-calendar/release-calendar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BodyComponent
+    BodyComponent,
+    CardViewComponent,
+    ListViewComponent,
+    ReleaseCalendarComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    PrimengModule
+    FormsModule,
+    PrimengModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
