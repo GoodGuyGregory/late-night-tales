@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Holds all components needed for PrimeNg
 import { PrimengModule } from './modules/primeng/primeng.module';
+import { HttpClientModule } from '@angular/common/http';
+
 import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { FormsModule } from '@angular/forms';
@@ -24,6 +26,7 @@ import { ReleaseCalendarComponent } from './components/body/release-calendar/rel
     ListViewComponent,
     ReleaseCalendarComponent,
 
+
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { ReleaseCalendarComponent } from './components/body/release-calendar/rel
     BrowserAnimationsModule,
     FormsModule,
     PrimengModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
