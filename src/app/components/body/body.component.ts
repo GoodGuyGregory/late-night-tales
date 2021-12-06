@@ -14,7 +14,7 @@ export class BodyComponent implements OnInit {
   constructor(public recordService: RecordService) { }
 
   ngOnInit(): void {
-    this.myRecords = this.recordService.getRecords();
+    this.recordService.getRecords().subscribe((records) => this.myRecords = records);
   }
 
 }

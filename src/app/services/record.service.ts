@@ -9,10 +9,12 @@ import { RECORDS } from '../my-records';
 })
 export class RecordService {
 
+  private apiUrl = 'http://localhost:5000/records'
+
   constructor(private http: HttpClient) { }
 
-  getRecords(): Record[] {
-    return RECORDS;
+  getRecords(): Observable<Record[]> {
+    return this.http.get<Record[]>(this.apiUrl);
 
   }
 

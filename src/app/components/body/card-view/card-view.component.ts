@@ -7,14 +7,14 @@ import { Record } from 'src/app/Record';
   styleUrls: ['./card-view.component.scss']
 })
 export class CardViewComponent implements OnInit {
-  @Input() records: Record[];
+  @Input() record: Record[];
 
-  public recordList: Record[];
+
 
   constructor() { }
 
   ngOnInit(): void {
-    this.recordList = this.records;
+
   }
 
 }
