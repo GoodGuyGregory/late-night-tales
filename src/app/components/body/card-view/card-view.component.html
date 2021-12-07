@@ -1,16 +1,22 @@
-<div class="card-view-container">
-    <p-dataView [value]="record" [paginator]="true" [rows]="12">
-        <ng-template let-record pTemplate="listItem">
-            <div class="p-grid card-container">
-                <div class="p-col record-list-item">
-                    <img src="{{record.cover_image}}" alt="{{record.title" width="300" height="300">
-                    <p class="title">{{record.title}}</p>
-                    <p>{{record.artist}}</p>
-                    <p>{{record.release_date}}</p>
+<div class="loader" *ngIf="loading">
+    <p-progressBar mode="indeterminate"></p-progressBar>
+</div>
+
+<div *ngIf="!loading">
+    <div class="card-view-container">
+        <p-dataView [value]="myRecords" [paginator]="true" [rows]="12" emptyMessage="loading...">
+            <ng-template let-record pTemplate="listItem">
+                <div class="p-grid card-container">
+                    <div class="p-col record-list-item">
+                        <img src="{{record.cover_image}}" alt="{{record.title" width="300" height="300">
+                        <p class="title">{{record.title}}</p>
+                        <p>{{record.artist}}</p>
+                        <p>{{record.release_date}}</p>
+                    </div>
                 </div>
-            </div>
-        </ng-template>
-    </p-dataView>
+            </ng-template>
+        </p-dataView>
+    </div>
 </div>
 
 

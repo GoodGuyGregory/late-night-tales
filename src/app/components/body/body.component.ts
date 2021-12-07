@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Record } from 'src/app/Record';
-import { RecordService } from '../../services/record.service';
 
 @Component({
   selector: 'app-body',
@@ -9,12 +7,12 @@ import { RecordService } from '../../services/record.service';
 })
 export class BodyComponent implements OnInit {
 
-  public myRecords: Record[] = [];
 
-  constructor(public recordService: RecordService) { }
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.recordService.getRecords().subscribe((records) => this.myRecords = records);
+
   }
 
 }
