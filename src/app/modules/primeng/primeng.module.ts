@@ -3,12 +3,14 @@ import { ButtonModule } from 'primeng/button';
 import { TabViewModule } from 'primeng/tabview';
 import { DataViewModule } from 'primeng/dataview';
 import { ProgressBarModule } from 'primeng/progressbar';
+import { TableModule } from 'primeng/table';
 
 const PrimeNGComponents = [
   DataViewModule,
   ButtonModule,
   TabViewModule,
-  ProgressBarModule
+  ProgressBarModule,
+  TableModule
 ];
 
 @NgModule({

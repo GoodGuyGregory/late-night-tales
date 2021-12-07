@@ -1,1 +1,25 @@
-<p>list-view works!</p>
+<div class="loader" *ngIf="loading">
+    <p-progressBar mode="indeterminate"></p-progressBar>
+</div>
+
+<div *ngIf="!loading" class="list-view-container">
+    <p-table [value]="myRecords" responsiveLayout="scroll" [paginator]="true" [rows]="10">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Album Cover</th>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Release Date</th>
+            </tr>
+        </ng-template>
+        <ng-template let-record pTemplate="body" let-product>
+            <tr for>
+                <td><img src={{record.cover_image}} width="150" height="150" style="margin: 5px;">
+                </td>
+                <td>{{record.title}}</td>
+                <td>{{record.artist}}</td>
+                <td>{{record.release_date}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
