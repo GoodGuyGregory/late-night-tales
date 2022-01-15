@@ -10,7 +10,7 @@ const PrimeNGComponents = [
   ButtonModule,
   TabViewModule,
   ProgressBarModule,
-  TableModule
+  TableModule,
 ];
 
 @NgModule({
