@@ -16,21 +16,7 @@ export class ListViewComponent implements OnInit {
   ngOnInit(): void {
     this.loading = true;
     setTimeout(() => {
-      this.recordService.getRecords().subscribe((records) => {
-        // implements Fisher Yates Randomization Shuffle
-        let m = records.length, t, i;
-
-        while (m) {
-
-          i = Math.floor(Math.random() * m--);
-
-          t = records[m];
-          records[m] = records[i];
-          records[i] = t;
-        }
-
-        this.myRecords = records
-      })
+      this.myRecords = this.recordService.localRecords
       this.loading = false;
     }, 3000);
   }

@@ -8,14 +8,21 @@ import { RECORDS } from '../my-records';
   providedIn: 'root'
 })
 export class RecordService {
-
+  //  API Service implementation:
+  // ==============================================
   private apiUrl = 'http://localhost:5000/records'
 
   constructor(private http: HttpClient) { }
 
+  // API Service Request:
   getRecords(): Observable<Record[]> {
     return this.http.get<Record[]>(this.apiUrl);
-
   }
+// =================================================
+
+// Local Versioning:
+// =================================================
+localRecords: Record[] = RECORDS;
+
 
 }
