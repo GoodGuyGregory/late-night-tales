@@ -7,9 +7,9 @@
         <ng-template pTemplate="header">
             <tr>
                 <th>Album Cover</th>
-                <th>Title</th>
-                <th>Artist</th>
-                <th>Release Date</th>
+                <th pSortableColumn="title">Title<p-sortIcon field="title"></p-sortIcon></th>
+                <th pSortableColumn="artist">Artist <p-sortIcon field="artist"></p-sortIcon></th>
+                <th pSortableColumn="release_date">Release Date</th>
             </tr>
         </ng-template>
         <ng-template let-record pTemplate="body" let-product>
